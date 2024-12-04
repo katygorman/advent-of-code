@@ -1,6 +1,6 @@
 import numpy as numpy
 
-INPUT_FILE_PATH = './day01-input.txt'
+INPUT_FILE_PATH = 'input.txt'
 
 
 def main():

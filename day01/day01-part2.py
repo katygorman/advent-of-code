@@ -1,7 +1,7 @@
 import numpy as numpy
 from collections import Counter
 
-INPUT_FILE_PATH = './day01-input.txt'
+INPUT_FILE_PATH = 'input.txt'
 
 
 def main():

@@ -1,4 +1,4 @@
-INPUT_FILE_PATH = './day02-input.txt'
+INPUT_FILE_PATH = 'input.txt'
 
 
 def main():
