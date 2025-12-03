@@ -1,6 +1,6 @@
 import re
 
-INPUT_FILE_PATH = './input.txt'
+INPUT_FILE_PATH = 'input.txt'
 
 
 def main():

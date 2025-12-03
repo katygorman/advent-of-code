@@ -1,33 +1,20 @@
 import numpy as numpy
-from functools import cmp_to_key
 
-INPUT_FILE_PATH = './input.txt'
+INPUT_FILE_PATH = 'input.txt'
 
 
 def main():
     ordering_rules, updates = parse_input_file()
-    total = calculate_middle_page_number_of_sorted_not_allowed_updates(ordering_rules, updates)
+    total = calculate_middle_page_number_of_allowed_updates(ordering_rules, updates)
     print(total)
 
 
-def calculate_middle_page_number_of_sorted_not_allowed_updates(ordering_rules, updates):
+def calculate_middle_page_number_of_allowed_updates(ordering_rules, updates):
     middle_page_numbers = 0
     for update in updates:
-        if not allowed_update(ordering_rules, update):
-            update = sorted(update, key=cmp_to_key(
-                lambda item1, item2: compare_nums_based_on_rules(ordering_rules, item1, item2)))
+        if allowed_update(ordering_rules, update):
             middle_page_numbers += update[(len(update)) // 2]
     return middle_page_numbers
-
-
-def compare_nums_based_on_rules(ordering_rules, num1, num2):
-    rules_for_nums = ordering_rules[numpy.isin(ordering_rules, [num1, num2]).all(axis=1)]
-    if len(rules_for_nums) == 0:
-        return 0
-    elif rules_for_nums[0][0] == num1:
-        return -1
-    else:
-        return 1
 
 
 def allowed_update(ordering_rules, update):

@@ -1,7 +1,7 @@
 import re
 import numpy as numpy
 
-INPUT_FILE_PATH = './input.txt'
+INPUT_FILE_PATH = 'input.txt'
 
 
 def main():
