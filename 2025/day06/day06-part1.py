@@ -8,6 +8,7 @@ def main():
     total = calculate_total(matrix)
     print(total)
 
+
 def calculate_total(matrix):
     total = 0
     for col in range(len(matrix[0])):
